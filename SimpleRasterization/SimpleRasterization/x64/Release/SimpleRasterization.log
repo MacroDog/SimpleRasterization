@@ -1,0 +1,46 @@
+﻿  EulerAngle.cpp
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(5): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(20): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(30): error C2011: “MathUtil”:“class”类型重定义
+  e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(24): note: 参见“MathUtil”的声明
+  MathUtil.cpp
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(1): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(2): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(5): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(19): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(20): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(30): error C2011: “MathUtil”:“class”类型重定义
+  e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(24): note: 参见“MathUtil”的声明
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(10): warning C4244: “-=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(22): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(25): error C2027: 使用了未定义类型“MathUtil”
+  e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(24): note: 参见“MathUtil”的声明
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(25): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(26): warning C4508: “{ctor}”: 函数应返回一个值；假定“void”返回类型
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(30): error C2027: 使用了未定义类型“MathUtil”
+  e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\include\math\mathutil.h(24): note: 参见“MathUtil”的声明
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(30): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\mathutil.cpp(31): warning C4508: “{dtor}”: 函数应返回一个值；假定“void”返回类型
+  Quaternion.cpp
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(12): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(20): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(22): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(28): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(31): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(37): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(39): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(40): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(41): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\quaternion.cpp(42): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  RotationMatrix.cpp
+  Vector3.cpp
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(82): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(84): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(92): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(96): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(112): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(113): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(114): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+e:\projects\c++projects\simplerasterization\simplerasterization\simplerasterization\src\math\vector3.cpp(115): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
