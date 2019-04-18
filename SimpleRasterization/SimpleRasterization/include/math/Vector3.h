@@ -33,3 +33,4 @@ inline Vector3 cross(const Vector3 &a, const Vector3 &b);
 inline Vector3 operator *(double k, const Vector3 &a);
 inline float distance(const Vector3 &a, const Vector3 &b);
 
+

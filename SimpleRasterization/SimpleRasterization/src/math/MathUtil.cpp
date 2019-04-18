@@ -12,7 +12,7 @@ float wrapPi(float theta) {
 	return theta;
 }
 
-float safeAcos(float x) {
+float sefeAcos(float x) {
 	if (x <= -1.0f) {
 		return -kPi;
 	}
@@ -21,6 +21,13 @@ float safeAcos(float x) {
 	}
 	return acos(x);
 }
+
+
+void sinCos(float * returnSin, float * returnCos, float theta) {
+	*returnSin = sin(theta);
+	*returnCos = cos(theta);
+}
+
 
 MathUtil::MathUtil() {
 }

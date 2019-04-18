@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Matrix4x3.cpp" />
     <ClCompile Include="src\math\EulerAngle.cpp" />
     <ClCompile Include="src\math\MathUtil.cpp" />
     <ClCompile Include="src\math\Quaternion.cpp" />
@@ -31,6 +32,7 @@
     <ClInclude Include="include\math\Quaternion.h" />
     <ClInclude Include="include\math\RotationMatrix.h" />
     <ClInclude Include="include\math\Vector3.h" />
+    <ClInclude Include="Matrix4x3.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

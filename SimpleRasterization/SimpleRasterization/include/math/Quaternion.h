@@ -20,7 +20,7 @@ public: float w, x, y, z;
 		Quaternion & operator*=(const Quaternion &a);
 		void normalize();
 		float getRotationAngle()const;
-		Vector3 getRaotationAxis()const;
+		Vector3 getRaotationAxis()const;  
 		Quaternion operator +(const Quaternion &a)const;
 public:
 	Quaternion();
@@ -35,6 +35,6 @@ extern Quaternion slerp(const Quaternion &a, const Quaternion &b, float t);
 //四元数共轭
 extern Quaternion conjugate(const Quaternion &q);
 //
-extern Quaternion pow(const Quaternion &q, float ecponent);
+extern Quaternion pow(const Quaternion &q, float exponent);
 #endif
 

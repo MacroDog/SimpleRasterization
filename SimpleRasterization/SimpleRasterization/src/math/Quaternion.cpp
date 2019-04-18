@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "Vector3.h"
 #include "EulerAngle.h"
+#include "MathUtil.h"
 
 float dot(const Quaternion & a, const Quaternion & b) {
 	return a.w*b.w + a.x*b.x + a.y*b.y + a.z*b.z;
@@ -112,6 +113,32 @@ void Quaternion::setToRotationAboutAxis(const Vector3 & axis, float theta) {
 	z = axis.y*sinThetaOver2;
 }
 
+void Quaternion::setToRotateObjectToInertial(const EulerAngle & orientation) {
+	//计算半角的sin和cos值
+	float sp, sb, sh;
+	float cp, cb, ch;
+	sinCos(&sp, &cp, orientation.pitch*.5f);
+	sinCos(&sb, &cb, orientation.bank*.5f);
+	sinCos(&sh, &ch, orientation.heading*.5f);
+	//计算结果
+	w = ch * cp*cb + sh * sp*sb;
+	x = ch * sp*cb + sh * cp*sb;
+	y = -ch * sp*sb + sh * cp*cb;
+	z = -sh * sp*cb + ch * cp*sb;
+}
+
+void Quaternion::setToRotateInertialToObject(const EulerAngle & orientation) {
+	float sh, sp, sb;
+	float ch, cp, cb;
+	sinCos(&sh, &ch, orientation.heading);
+	sinCos(&sp, &sp, orientation.pitch);
+	sinCos(&sb, &cb, orientation.bank);
+	w = ch * cp*cb + sh * sp*sb;
+	x = -ch * sp* cb - sh * cp*sb;
+	y = ch * sp*sb - sh * cb*cp;
+	z = sh * sp*cb - ch * cp*sb;
+}
+
 Quaternion Quaternion::operator*(const Quaternion & a) const {
 	Quaternion result;
 	result.w = w * a.w - x * a.x - y * a.y - z * a.z;
@@ -138,6 +165,29 @@ void Quaternion::normalize() {
 		assert(false);
 		identity();
 	}
+}
+
+float Quaternion::getRotationAngle() const {
+	float theOver2 = sefeAcos(w);
+	return theOver2*2.0f;
+}
+
+Vector3 Quaternion::getRaotationAxis() const {
+	float sinThetaOver2Sq = 1.0f - w * w;
+	if (sinThetaOver2Sq <= 0.0f) {
+		return Vector3(1.0f, 0.0f, 0.0f);
+	}
+	float oneOverSinThetaOver2 = 1.0f / sqrt(sinThetaOver2Sq);
+	return Vector3(x*oneOverSinThetaOver2, y*sinThetaOver2Sq, z*sinThetaOver2Sq);
+}
+
+Quaternion Quaternion::operator+(const Quaternion & a) const {
+	Quaternion result;
+	result.w = w + a.w;
+	result.x = x + a.x;
+	result.y = y + a.y;
+	result.z = z + a.z;
+	return result;
 }
 
 
