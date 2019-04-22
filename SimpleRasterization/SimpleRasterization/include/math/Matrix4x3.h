@@ -8,10 +8,10 @@ public: float m11, m12, m13;
 		float m21, m22, m23;
 		float m31, m32, m33;
 		float tx, ty, tz;
-		//µ¥Î»¾ØÕó
+		//ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½
 		void identity();
 
-		//Æ½ÒÆ
+		//Æ½ï¿½ï¿½
 		void zeroTranslation();
 		void setTranslation(const  Vector3 &d);
 		void setupTranslation(const Vector3 &d);
@@ -21,30 +21,30 @@ public: float m11, m12, m13;
 		void setupLocalToParent(const Vector3 &pos, const RotationMatrix &orient);
 		void setupLocalToParent(const Vector3 &pos, const Quaternion &origent);
 		
-		//Ğı×ª h-p-b
+		//ï¿½ï¿½×ª h-p-b
 		void setupRotate(int axis, float theta);
 		
-		//ÈÎÒâÖáĞı×ª
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª
 		void setupRotate(const Vector3 &axis, float theta);
 		
-		//¹¹ÔìĞı×ª¾ØÕó£¬½ÇÎ»ÒÆÓÉËÄÔªÊıĞÎÊ½¸ø³ö
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ó£¬½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
 		void fromQuaternion(const Quaternion &q);
 
-		//ÉèÖÃËõ·Å
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void setupScale(const Vector3 &s);
 
-		//ÑØÖáËõ·Å
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void setupScaleAlongAxis(const Vector3 &axis, float k);
 
 		void setupShear(int axis, float s, float t);
 
-		//Í¶Ó°¾ØÕó
+		//Í¶Ó°ï¿½ï¿½ï¿½ï¿½
 		void setupProject(const Vector3 &n);
 
-		//ÉèÖÃ·´Éä¾ØÕó
+		//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		void setupReflect(int axis, float k = 0.0f);
 
-		//ÉèÖÃÆ½Ãæ·´Éä¾ØÕó
+		//ï¿½ï¿½ï¿½ï¿½Æ½ï¿½æ·´ï¿½ï¿½ï¿½ï¿½ï¿½
 		void setupReflect(const Vector3 &n);
 
 
@@ -61,13 +61,13 @@ Matrix4x3 &operator*=(const Vector3 &p, const Matrix4x3 &m);
 
 Matrix4x3 &operator*=(const Matrix4x3 &a, const Matrix4x3 &b);
 
-//¼ÆËãĞĞÁĞÊ½
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 float dateminant(const Matrix4x3 &m);
 
-//¼ÆËã¾ØÕóµÄÄæ
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 Matrix4x3 inverse(const Matrix4x3 &m);
 
-//ÌáÈ¡¾ØÕóÆ½ÒÆ
+//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½
 Vector3 getTranslation(const Matrix4x3 &m);
 
 //

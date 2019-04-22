@@ -76,3 +76,6 @@ void Matrix4x3::setupRotate(int axis, float theta)
 	}
 	tx =0; ty = 0; tz = 0;
 }
+Vector3 Matrix4x3::getTranslation(const Matrix4x3 &m){
+	return  Vector3(m.tx,m.ty,m.tz);
+}
