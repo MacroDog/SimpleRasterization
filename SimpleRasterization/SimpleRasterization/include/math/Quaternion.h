@@ -2,8 +2,8 @@
 #ifndef __QUATERNION_H_INCLUDED__
 #define __QUATERNION_H_INCLUDED__
 #include <assert.h>
-#include "Vector3.h"
-#include "EulerAngle.h"
+#include <Vector3.h>
+#include <EulerAngle.h>
 
 class Quaternion {
 public: float w, x, y, z;
@@ -17,10 +17,10 @@ public: float w, x, y, z;
 
 		//²æ³Ë
 		Quaternion operator * (const Quaternion &a)const;
-		Quaternion & operator*=(const Quaternion &a);
+		Quaternion &operator*=(const Quaternion &a);
 		void normalize();
 		float getRotationAngle()const;
-		Vector3 getRaotationAxis()const;  
+		Vector3 getRaotationAxis()const;
 		Quaternion operator +(const Quaternion &a)const;
 public:
 	Quaternion();

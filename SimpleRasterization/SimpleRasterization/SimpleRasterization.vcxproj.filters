@@ -30,6 +30,9 @@
     <ClCompile Include="src\math\Vector3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\math\Matrix4x3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\math\EulerAngle.h">
@@ -45,6 +48,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="include\math\Vector3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\math\Matrix4x3.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

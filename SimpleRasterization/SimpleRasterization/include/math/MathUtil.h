@@ -1,5 +1,5 @@
 #pragma once
-#include<math.h>;
+#include<math.h>
 #ifndef  __MATHUTIL_H_INCLUED__
 const float kPi = 3.14159265f;
 const float k2Pi = kPi * 2;

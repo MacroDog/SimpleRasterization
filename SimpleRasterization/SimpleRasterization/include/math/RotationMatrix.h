@@ -1,7 +1,5 @@
 #pragma once
-#include "Vector3.h"
-#include "Quaternion.h"
-#include "MathUtil.h"
+#include <Quaternion.h>
 #ifndef __ROTATIONMATRIX_H_INCLUDED__
 #define __ROTATIONMATRIX_H_INCLUDED__
 class RotationMatrix {

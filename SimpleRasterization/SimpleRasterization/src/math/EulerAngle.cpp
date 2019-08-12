@@ -1,9 +1,7 @@
-
-#include "EulerAngle.h"
-#include "Quaternion.h"
-#include "RotationMatrix.h"
-#include "MathUtil.h"
+#include <MathUtil.h>
+#include <Quaternion.h>
 #include <math.h>
+#include <Matrix4x3.h>
 const EulerAngle kEulerAnglesIdentity(0.0f, 0.0f, 0.0f);
 
 

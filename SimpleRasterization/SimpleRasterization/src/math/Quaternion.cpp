@@ -191,4 +191,3 @@ Quaternion Quaternion::operator+(const Quaternion & a) const {
 }
 
 
-
