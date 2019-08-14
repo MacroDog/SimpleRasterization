@@ -102,8 +102,8 @@ void Matrix4x3::setupRotate(int axis, float theta) {
 }
 
 void Matrix4x3::setupRotate(const Vector3 &axis, float theta) {
-		
+
 }
-Vector3 Matrix4x3::getTranslation(const Matrix4x3 &m){
-	return  Vector3(m.tx,m.ty,m.tz);
+Vector3 Matrix4x3::getTranslation(const Matrix4x3 &m) {
+	return  Vector3(m.tx, m.ty, m.tz);
 }

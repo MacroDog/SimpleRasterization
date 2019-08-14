@@ -30,7 +30,7 @@ void EulerAngle::canonize() {
 	heading = wrapPi(heading);
 }
 
-void EulerAngle::fromObjectToInertialQuterntion(const Quaternion & q) {
-	float sp = -2.0f*(q.y*q.z - q.w*q.x);
+void EulerAngle::fromObjectToInertialQuterntion(const Quaternion &q) {
+	float sp = -2.0f * (q.y * q.z - q.w * q.x);
 }
 

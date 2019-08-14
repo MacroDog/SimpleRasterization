@@ -2,8 +2,7 @@
 #ifndef  __MATRIX4X3_H_INCLUDE__
 #define __MATRUAX4X3_H_INCLUDE__
 
-class Matrix4x3
-{
+class Matrix4x3 {
 public: float m11, m12, m13;
 		float m21, m22, m23;
 		float m31, m32, m33;
@@ -15,18 +14,20 @@ public: float m11, m12, m13;
 		void zeroTranslation();
 		void setTranslation(const  Vector3 &d);
 		void setupTranslation(const Vector3 &d);
-		
+
 		//
 		void setupLocalToParent(const Vector3 &pos, const EulerAngle &orient);
 		void setupLocalToParent(const Vector3 &pos, const RotationMatrix &orient);
 		void setupLocalToParent(const Vector3 &pos, const Quaternion &origent);
-		
+
 		//��ת h-p-b
 		void setupRotate(int axis, float theta);
-		
+
 		//��������ת
 		void setupRotate(const Vector3 &axis, float theta);
-		
+
+		Vector3 getTranslation(const Matrix4x3 &m);
+
 		//������ת���󣬽�λ������Ԫ����ʽ����
 		void fromQuaternion(const Quaternion &q);
 
@@ -53,9 +54,9 @@ public:
 	~Matrix4x3();
 };
 
-Vector3 operator*(const Vector3 &p,const Matrix4x3 &m);
+Vector3 operator*(const Vector3 &p, const Matrix4x3 &m);
 
-Matrix4x3 operator*(const Matrix4x3 &a,const Matrix4x3 &b);
+Matrix4x3 operator*(const Matrix4x3 &a, const Matrix4x3 &b);
 
 Matrix4x3 &operator*=(const Vector3 &p, const Matrix4x3 &m);
 

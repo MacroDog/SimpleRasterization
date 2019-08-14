@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include<math.h>
 #ifndef  __MATHUTIL_H_INCLUED__
 const float kPi = 3.14159265f;
@@ -7,12 +7,12 @@ const float kPiOver2 = kPi / 2.0f;
 const float k1OverPi = 1.0f / kPi;
 const float k1Over2Pi = 1.0f / k2Pi;
 
-//½«½Ç¶È¹éÒ»µ½-piµ½pi
+//å°†è§’åº¦å½’ä¸€åˆ°-piåˆ°pi
 float wrapPi(float theta);
-//¡°°²È«¡± ·´Èı½Çº¯Êı
+//â€œå®‰å…¨â€ åä¸‰è§’å‡½æ•°
 float sefeAcos(float x);
 
-void sinCos(float * returnSin, float * returnCos, float theta);
+void sinCos(float *returnSin, float *returnCos, float theta);
 
 #endif  // __MATHUTIL_H_INCLUED__
 class MathUtil {

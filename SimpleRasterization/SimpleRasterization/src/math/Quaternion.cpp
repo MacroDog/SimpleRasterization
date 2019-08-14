@@ -5,11 +5,11 @@
 #include "EulerAngle.h"
 #include "MathUtil.h"
 
-float dot(const Quaternion & a, const Quaternion & b) {
-	return a.w*b.w + a.x*b.x + a.y*b.y + a.z*b.z;
+float dot(const Quaternion &a, const Quaternion &b) {
+	return a.w * b.w + a.x * b.x + a.y * b.y + a.z * b.z;
 }
 
-Quaternion slerp(const Quaternion & a, const Quaternion & b, float t) {
+Quaternion slerp(const Quaternion &a, const Quaternion &b, float t) {
 	if (t <= 0.0f) {
 		return a;
 	}
@@ -42,18 +42,18 @@ Quaternion slerp(const Quaternion & a, const Quaternion & b, float t) {
 		//计算夹角
 		float Omega = atan2(sinOmega, cosOmega);
 		float oneOverSimOmega = 1.0f / sinOmega;
-		k0 = sin((1.0f - t)* Omega)*oneOverSimOmega;
-		k1 = sin(t*Omega)*oneOverSimOmega;
+		k0 = sin((1.0f - t) * Omega) * oneOverSimOmega;
+		k1 = sin(t * Omega) * oneOverSimOmega;
 	}
 	Quaternion result;
-	result.w = a.w*k0 + bw * k1;
+	result.w = a.w * k0 + bw * k1;
 	result.x = a.x * k0 + bx * k1;
-	result.y = a.y*k0 + by * k1;
-	result.z = a.y*k0 + bz * k1;
+	result.y = a.y * k0 + by * k1;
+	result.z = a.y * k0 + bz * k1;
 	return result;
 }
 
-Quaternion conjugate(const Quaternion & q) {
+Quaternion conjugate(const Quaternion &q) {
 	Quaternion result;
 	result.w = q.w;
 	result.x = -q.x;
@@ -62,7 +62,7 @@ Quaternion conjugate(const Quaternion & q) {
 	return result;
 }
 
-Quaternion pow(const Quaternion & q, float exponent) {
+Quaternion pow(const Quaternion &q, float exponent) {
 	//防止除零
 	if (fabs(q.w) > 0.9999f) {
 		return q;
@@ -72,9 +72,9 @@ Quaternion pow(const Quaternion & q, float exponent) {
 	Quaternion result;
 	result.w = cos(halfTheta);
 	float mult = sin(newhalfTheta) / sin(halfTheta);
-	result.x = q.x*mult;
-	result.y = q.y*mult;
-	result.z = q.z*mult;
+	result.x = q.x * mult;
+	result.y = q.y * mult;
+	result.z = q.z * mult;
 	return result;
 }
 
@@ -102,44 +102,44 @@ void Quaternion::setToRotationAboutZ(float theta) {
 	z = sin(thetaOver2);
 }
 
-void Quaternion::setToRotationAboutAxis(const Vector3 & axis, float theta) {
+void Quaternion::setToRotationAboutAxis(const Vector3 &axis, float theta) {
 	//assert(fabs(vectorMag(axis) - 1.0f) < 0.01f);
 	float thetaOver2 = theta * 0.5f;
 	float sinThetaOver2 = sin(thetaOver2);
 
 	w = cos(theta);
-	x = axis.x*sinThetaOver2;
-	y = axis.y*sinThetaOver2;
-	z = axis.y*sinThetaOver2;
+	x = axis.x * sinThetaOver2;
+	y = axis.y * sinThetaOver2;
+	z = axis.y * sinThetaOver2;
 }
 
-void Quaternion::setToRotateObjectToInertial(const EulerAngle & orientation) {
+void Quaternion::setToRotateObjectToInertial(const EulerAngle &orientation) {
 	//计算半角的sin和cos值
 	float sp, sb, sh;
 	float cp, cb, ch;
-	sinCos(&sp, &cp, orientation.pitch*.5f);
-	sinCos(&sb, &cb, orientation.bank*.5f);
-	sinCos(&sh, &ch, orientation.heading*.5f);
+	sinCos(&sp, &cp, orientation.pitch * .5f);
+	sinCos(&sb, &cb, orientation.bank * .5f);
+	sinCos(&sh, &ch, orientation.heading * .5f);
 	//计算结果
-	w = ch * cp*cb + sh * sp*sb;
-	x = ch * sp*cb + sh * cp*sb;
-	y = -ch * sp*sb + sh * cp*cb;
-	z = -sh * sp*cb + ch * cp*sb;
+	w = ch * cp * cb + sh * sp * sb;
+	x = ch * sp * cb + sh * cp * sb;
+	y = -ch * sp * sb + sh * cp * cb;
+	z = -sh * sp * cb + ch * cp * sb;
 }
 
-void Quaternion::setToRotateInertialToObject(const EulerAngle & orientation) {
+void Quaternion::setToRotateInertialToObject(const EulerAngle &orientation) {
 	float sh, sp, sb;
 	float ch, cp, cb;
 	sinCos(&sh, &ch, orientation.heading);
 	sinCos(&sp, &sp, orientation.pitch);
 	sinCos(&sb, &cb, orientation.bank);
-	w = ch * cp*cb + sh * sp*sb;
-	x = -ch * sp* cb - sh * cp*sb;
-	y = ch * sp*sb - sh * cb*cp;
-	z = sh * sp*cb - ch * cp*sb;
+	w = ch * cp * cb + sh * sp * sb;
+	x = -ch * sp * cb - sh * cp * sb;
+	y = ch * sp * sb - sh * cb * cp;
+	z = sh * sp * cb - ch * cp * sb;
 }
 
-Quaternion Quaternion::operator*(const Quaternion & a) const {
+Quaternion Quaternion::operator*(const Quaternion &a) const {
 	Quaternion result;
 	result.w = w * a.w - x * a.x - y * a.y - z * a.z;
 	result.x = w * a.x + x * a.w + y * a.z - z * a.y;
@@ -148,13 +148,13 @@ Quaternion Quaternion::operator*(const Quaternion & a) const {
 	return result;
 }
 
-Quaternion & Quaternion::operator*=(const Quaternion & a) {
-	*this = *this*a;
+Quaternion &Quaternion::operator*=(const Quaternion &a) {
+	*this = *this * a;
 	return *this;
 }
 
 void Quaternion::normalize() {
-	float mag = (float)sqrt(w*w + x * x + y * y + z * z);
+	float mag = (float)sqrt(w * w + x * x + y * y + z * z);
 	if (mag > 0.0f) {
 		float oneOverMag = 1.0f / mag;
 		w *= mag;
@@ -169,7 +169,7 @@ void Quaternion::normalize() {
 
 float Quaternion::getRotationAngle() const {
 	float theOver2 = sefeAcos(w);
-	return theOver2*2.0f;
+	return theOver2 * 2.0f;
 }
 
 Vector3 Quaternion::getRaotationAxis() const {
@@ -178,10 +178,10 @@ Vector3 Quaternion::getRaotationAxis() const {
 		return Vector3(1.0f, 0.0f, 0.0f);
 	}
 	float oneOverSinThetaOver2 = 1.0f / sqrt(sinThetaOver2Sq);
-	return Vector3(x*oneOverSinThetaOver2, y*sinThetaOver2Sq, z*sinThetaOver2Sq);
+	return Vector3(x * oneOverSinThetaOver2, y * sinThetaOver2Sq, z * sinThetaOver2Sq);
 }
 
-Quaternion Quaternion::operator+(const Quaternion & a) const {
+Quaternion Quaternion::operator+(const Quaternion &a) const {
 	Quaternion result;
 	result.w = w + a.w;
 	result.x = x + a.x;
